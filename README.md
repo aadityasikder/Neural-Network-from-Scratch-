@@ -14,6 +14,60 @@ This notebook implements a neural network from scratch using only NumPy, without
 - **Training**: The network is trained on the MNIST dataset, which consists of handwritten digit images.
 - **Evaluation**: The trained model's accuracy is evaluated on both the training and test sets.
 
+
+
+## Process Flow
+
+The following flow chart illustrates the overall process of training and evaluating the neural network:
+
+                 ┌───────────────┐
+                 │  Initialize   │
+                 │   Weights,    │
+                 │  Biases, and  │
+                 │ Hyperparameters│
+                 └──────┬─────────┘
+                        │
+                 ┌───────▼─────────┐
+                 │    Preprocess  │
+                 │     Data       │
+                 └──────┬─────────┘
+                        │
+                 ┌───────▼─────────┐
+                 │    Training    │
+                 │     Loop       │
+                 └──────┬─────────┘
+                        │
+              ┌────────┴────────┐
+              │    Forward     │
+              │   Propagation  │
+              └──────┬─────────┘
+                     │
+              ┌──────┴─────────┐
+              │  Backpropagation│
+              └──────┬─────────┘
+                     │
+              ┌──────┴─────────┐
+              │  Update Weights│
+              │   and Biases   │
+              └──────┬─────────┘
+                     │
+                     │
+              ┌──────┴─────────┐
+              │    Evaluate    │
+              │    Accuracy    │
+              └─────────────────┘
+
+**Description:**
+1. Initialize weights, biases, and hyperparameters for the neural network.
+2. Preprocess the data (e.g., normalize, reshape).
+3. Start the training loop:
+   - Perform forward propagation to compute outputs.
+   - Perform backpropagation to compute gradients.
+   - Update weights and biases using the gradients.
+   - Evaluate the accuracy of the model.
+4. Repeat the training loop for the specified number of epochs.
+
+
 ## Dependencies
 
 The following libraries are required to run this notebook:
